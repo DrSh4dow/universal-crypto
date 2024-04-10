@@ -1,3 +1,13 @@
 // compute a sha-256 hash of the given string
 hash: func(a: string) -> string
 
+record crab {
+    age: u32,
+    name: string
+}
+
+get-ferris: func() -> crab
+
+resource beach {
+    is-ferris-here: func() -> bool
+}
