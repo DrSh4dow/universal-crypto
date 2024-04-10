@@ -1,0 +1,20 @@
+[package]
+name = "universal_crypto"
+version = "0.1.0"
+edition = "2021"
+description = "Universal crypto library"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.wasmer]
+namespace = "drsh4dow"
+abi = "none"
+bindings = { wai-version = "0.1.0", exports = "universal-crypto.wai" }
+
+[dependencies]
+base64 = "0.22.0"
+secret-toolkit-crypto = { version = "0.10.0", features = ["hash"] }
+wai-bindgen-rust = "0.2.3"
